@@ -1,2 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager with Deadline</title>
+  <link rel="stylesheet" href="to_do_list.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Task Manager</h2>
+
+    <div class="input-group">
+      <label>Task:</label>
+      <input type="text" id="taskInput" placeholder="Enter task...">
+    </div>
+
+    <div class="input-group">
+      <label>Due Date:</label>
+      <input type="date" id="taskDate">
+    </div>
+
+    <div class="input-group">
+      <label>Due Time:</label>
+      <input type="time" id="taskTime">
+    </div>
+
+    <button onclick="addTask()">Add Task</button>
+    <p class="error" id="errorMsg"></p>
+
+    <ul id="taskList"></ul>
+  </div>
+  <script src="to_do_list_script.js"></script>
+</body>
 </html>
