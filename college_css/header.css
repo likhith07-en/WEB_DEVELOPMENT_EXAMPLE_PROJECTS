@@ -1,0 +1,192 @@
+.header {
+    background: linear-gradient(110deg, #2f1d12, #5b2b16 45%, #813c1b);
+    color: #fffdf8;
+}
+
+.logo {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+    padding: 0.85rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.brand img {
+    height: 68px;
+    width: 68px;
+    border-radius: 14px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.45);
+}
+
+.brand-text h1 {
+    margin: 0;
+    font-size: clamp(1.05rem, 0.9rem + 1.2vw, 1.85rem);
+    font-family: "Source Serif 4", Georgia, serif;
+    letter-spacing: 0.02em;
+}
+
+.brand-text p {
+    margin: 0.15rem 0 0;
+    font-size: 0.9rem;
+    opacity: 0.92;
+}
+
+.auth-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+}
+
+.student-login,
+.staff-login,
+.menu-toggle {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.14);
+    padding: 0.55rem 0.9rem;
+    border-radius: 11px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.student-login:hover,
+.staff-login:hover,
+.menu-toggle:hover {
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.24);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.topnav {
+    background-color: #f1ba7c;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    border-bottom: 1px solid rgba(47, 29, 18, 0.15);
+}
+
+.topnav-wrap {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.topnav a,
+.dropbt {
+    color: #fffdf8;
+    text-decoration: none;
+    display: block;
+    border: 0;
+    background: transparent;
+    padding: 0.86rem 0.95rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.topnav a:hover,
+.dropbt:hover,
+.topnav a.active-page {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #5f290f;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 290px;
+    background-color: #2f1d12;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 14px 26px rgba(25, 13, 7, 0.35);
+    z-index: 10;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #ffe9ce;
+    padding: 0.66rem 0.85rem;
+    font-size: 0.88rem;
+}
+
+.dropdown-content a:hover {
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content,
+.dropdown.open .dropdown-content {
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .auth-actions .student-login,
+    .auth-actions .staff-login {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+    }
+
+    .topnav {
+        display: none;
+    }
+
+    .topnav.open {
+        display: block;
+    }
+
+    .topnav-wrap {
+        display: grid;
+        width: min(1120px, 95%);
+    }
+
+    .topnav a,
+    .dropbt {
+        width: 100%;
+        text-align: left;
+        border-top: 1px solid rgba(47, 29, 18, 0.15);
+    }
+
+    .dropdown-content {
+        position: static;
+        min-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        background: rgba(47, 29, 18, 0.95);
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
+}
